@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego de Memoria</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <h1 class="text-titulo text-center my-3">Memory game</h1>
+        </div>
+        <div class="row">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">🏆Player: <span class="player-name"> </span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Successes: <span class="guess">0</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Attempts <span class="try">0</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Time: <span class="time">0</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link">Level: <span class="level">0</span></a>
+                </li>
+                <li class="nav-item">
+                    <button class="btn btn-danger btn-iniciar" type="button">Start</button>
+                </li>
+            </ul>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <!-- Tablero de las imagenes -->
+                        <div class="row tablero">
+                            <h1 class="text-tablero">Game-board</h1>
+                            <hr>
+                        </div>
+                    </div>
+                    <!-- Celebración/Game Over-->
+                    <div class="celebration-container">
+                        <img src="images/Celebration.gif" id="celebration">
+                    </div>
+                    <div class="game-over-container">
+                        <img src="images/GameOver.gif" id="gameOver">
+                    </div>
+
+                    <div class="col-12 col-lg-4 score">
+                        <!-- Tablero de records -->
+                        <table class="table tabla-estadisticas">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Player</th>
+                                    <th scope="col">Level</th>
+                                    <th scope="col">Attempts</th>
+                                    <th scope="col">Successes</th>
+                                    <th scope="col">Time remaining</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Registros de cada jugador -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------ Puntaje del juego ------------>
+
+    <!------------ Ventana para el nombre del jugador ------------>
+    <!-- Modal -->
+    <div class="modalNombre modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Enter your name</h1>
+                    <button type="button" class="btn-close cerrar" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Name</label>
+                            <input type="text" class="nombreJ form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer d-flex justify-content-between">
+                    <button type="button" class="cerrar btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="registrar btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="function.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="guardarDatos.js"></script>
+</body>
+
+</html>
